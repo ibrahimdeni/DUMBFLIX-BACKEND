@@ -143,6 +143,9 @@ func (h *handler) UpdateUser(w http.ResponseWriter, r *http.Request) {
 	if request.Address != "" {
 		user.Address = request.Address
 	}
+	if request.Role != "" {
+		user.Role = request.Role
+	}
 	data, err := h.UserRepository.UpdateUser(user)
 	if err != nil {
 		w.WriteHeader(http.StatusInternalServerError)
@@ -191,5 +194,6 @@ func convertResponse(u models.User) usersdto.UserResponse {
 		Phone:     u.Phone,
 		Address:   u.Address,
 		Subscribe: u.Subscribe,
+		Role: u.Role,
 	}
 }

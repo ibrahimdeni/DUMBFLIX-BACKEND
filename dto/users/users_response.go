@@ -9,4 +9,5 @@ type UserResponse struct {
 	Phone     string `json:"phone" gorm:"type: varchar(255)"`
 	Address   string `json:"address" gorm:"type: text"`
 	Subscribe string `json:"subscribe" gorm:"type:text"`
+	Role string `json:"role"`
 }
