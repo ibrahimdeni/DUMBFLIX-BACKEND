@@ -144,6 +144,7 @@ func (h *handlerAuth) Login(w http.ResponseWriter, r *http.Request) {
     Phone: user.Phone,
     Address: user.Address,
     Role: user.Role,
+    Subscribe: user.Subscribe,
   }
 
   w.Header().Set("Content-Type", "application/json")
