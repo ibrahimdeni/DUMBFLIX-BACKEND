@@ -8,6 +8,7 @@ type LoginResponse struct {
 	Gender  string `json:"gender" gorm:"type: varchar(255)"`
 	Phone   string `json:"phone" gorm:"type: varchar(255)"`
 	Address string `json:"address" gorm:"type: varchar(255)"`
+	Subscribe string `json:"subscribe" form:"subscribe"`
 	Role string `json:"role"`
 }
 

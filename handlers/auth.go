@@ -60,7 +60,7 @@ func (h *handlerAuth) Register(w http.ResponseWriter, r *http.Request) {
 	  Gender		: request.Gender,
 	  Phone		: request.Phone,
 	  Address		: request.Address,
-	  Subscribe	: "false",
+	  Subscribe	: "Regular Member",
   	Role:     "Customer",
   }
 
@@ -174,6 +174,7 @@ func (h *handlerAuth) CheckAuth(w http.ResponseWriter, r *http.Request) {
 		Gender:    user.Gender,
 		Phone:     user.Phone,
 		Address:   user.Address,
+    Subscribe: user.Subscribe,
 		Role:      user.Role,
 	}
 
